@@ -7,7 +7,7 @@ interface NavbarProps {
 
 export default function Header({ activeSection, setActiveSection }: NavbarProps) {
   return (
-    <nav className="bg-blue-600 p-4 text-white">
+    <nav className="fiexd top-0 bg-blue-600 p-4 text-black">
       <div className="container mx-auto flex justify-center space-x-6">
         <button 
           onClick={() => setActiveSection('home')} 

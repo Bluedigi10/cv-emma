@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-      <div className="min-h-screen flex flex-col">
+      <div className="min-w-screen flex flex-col">
       <Header activeSection={activeSection} setActiveSection={setActiveSection} />
       
       <main className="flex-grow">
