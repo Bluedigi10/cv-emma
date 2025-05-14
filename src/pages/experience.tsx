@@ -72,9 +72,9 @@ export default function Experience() {
     });
   }, []);
   return (
-    <SectionWrapper id="experiencia">
+    <SectionWrapper id="experiencia" bgColor="bg-gradient-to-b from-blue-900 to-blue-700">
       <div className="w-full opacity-0 animate-fade-in-start">
-        <h2 className="text-3xl font-bold mb-12 text-center">Experiencia</h2>
+        <h2 className="text-white text-3xl font-bold mb-12 text-center">Experiencia</h2>
 
         <ul className="space-y-12 flex flex-col items-center">
           {experiencias.map((exp) => (

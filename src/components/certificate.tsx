@@ -1,12 +1,22 @@
-import type { Certificate } from "../types/type";
+import type { Certificate } from "../types/type"
+import { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css';
 
 interface CertificateProps {
   certificate: Certificate;
 }
 
 export default function Certificate({ certificate }: CertificateProps) {
+    useEffect(() => {
+        AOS.init({
+          duration: 1000,
+          easing: 'ease-in-out',
+          once: false,
+        });
+      }, []);
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md">
+    <div data-aos="fade-up" className="bg-white p-6 rounded-lg shadow-md">
       <img 
         src={certificate.imageUrl} 
         alt={certificate.name} 

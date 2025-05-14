@@ -1,6 +1,6 @@
-import type { Certificate } from '../types/type';
-import SectionWrapper from '../components/sectionWrapper';
-import Certificado from '../components/certificate';
+import type { Certificate } from '../types/type'
+import SectionWrapper from '../components/sectionWrapper'
+import Certificado from '../components/certificate'
 
 const certificados: Certificate[] = [
   {
@@ -16,14 +16,35 @@ const certificados: Certificate[] = [
     emitter: 'Udemy',
     date: '2023-12-15',
     imageUrl: 'https://ejemplo.com/certificado2'
-  }
+  },
+  {
+    id: 3,
+    name: 'Spring Boot Profesional',
+    emitter: 'Udemy',
+    date: '2023-12-15',
+    imageUrl: 'https://ejemplo.com/certificado2'
+  },
+  {
+    id: 4,
+    name: 'Spring Boot Profesional',
+    emitter: 'Udemy',
+    date: '2023-12-15',
+    imageUrl: 'https://ejemplo.com/certificado2'
+  },
+  {
+    id: 5,
+    name: 'Spring Boot Profesional',
+    emitter: 'Udemy',
+    date: '2023-12-15',
+    imageUrl: 'https://ejemplo.com/certificado2'
+  },
 ];
 
 export default function Certificates() {
   return (
-    <SectionWrapper id="certificados">
+    <SectionWrapper id="certificados" bgColor="bg-gradient-to-b from-blue-900 to-blue-700">
       <div className="w-full opacity-0 animate-fade-in-start">
-        <h2 className="text-3xl font-bold mb-8 text-center">Certificados</h2>
+        <h2 className="text-white text-3xl font-bold mb-8 text-center">Certificados</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {certificados.map(cert => (
             <Certificado key={cert.id} certificate={cert} />
