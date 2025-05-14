@@ -7,7 +7,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #b1b1b1;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -57,7 +57,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #6b6b6b;
+  border-color: #4d6edb;
 }
 button:focus,
 button:focus-visible {
@@ -66,11 +66,11 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
+    color: #000000;
     background-color: #ffffff;
   }
   a:hover {
-    color: #8a8a8a;
+    color: #1f2eff;
   }
   button {
     background-color: #f9f9f9;
@@ -84,4 +84,19 @@ button:focus-visible {
 
 .animate-fade-in-start {
   animation: fade-in-start 0.5s ease-out forwards;
+}
+
+@keyframes slideFromButton {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+.animate-slide-from-button {
+  animation: slideFromButton 0.4s ease-out forwards;
 }
