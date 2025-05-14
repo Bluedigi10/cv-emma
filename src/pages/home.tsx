@@ -10,8 +10,8 @@ export default function Home() {
     if (buttonRef.current) {
       const rect = buttonRef.current.getBoundingClientRect();
       setModalPosition({
-        top: rect.top - rect.height / 2 + window.scrollY,
-        left: rect.left + rect.width / 2 + window.screenX
+        top: rect.top - rect.height * 3,
+        left: rect.left + rect.width / 2
       });
     }
     setIsAboutOpen(true);
@@ -45,13 +45,14 @@ export default function Home() {
         </button>
       </div>
       {isAboutOpen && (
-        <div className="fixed inset-0 bg-none bg-opacity-90 flex items-center justify-center z-50">
+        <div className="fixed inset-0 bg-opacity-100 z-50 flex items-center justify-center">
           <div
-            className="absolute bg-white p-6 rounded-xl shadow-lg animate-slide-from-button"
+            className="fixed bg-white p-6 rounded-xl shadow-lg animate-slide-from-button max-w-[90%] w-full sm:max-w-lg overflow-y-auto"
             style={{
               top: modalPosition.top,
               left: modalPosition.left,
               transform: 'translate(-50%, -50%)', // centrar horizontalmente sobre el botón
+              maxHeight: '90vh',
             }}
           >
             <h2 className="text-gray-700 text-2xl font-bold mb-4">Sobre mí</h2>
